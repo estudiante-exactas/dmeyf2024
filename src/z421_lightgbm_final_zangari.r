@@ -22,7 +22,7 @@ PARAM$experimento <- "KA4210"
 PARAM$semilla_primigenia <- 777787 # cambie 102191 por 777787
 
 dataset <- "./datasets/competencia_01_R.csv" # AGREGADO MIO
-PARAM$input$dataset <- "./datasets/competencia_01_R.csv" # cambié "./datasets/competencia_01.csv" por "./datasets/competencia_01_LGBM.csv"
+PARAM$input$dataset <- "./datasets/competencia_01_R.csv" # cambiÃ© "./datasets/competencia_01.csv" por "./datasets/competencia_01_LGBM.csv"
 PARAM$input$training <- c(202104) # meses donde se entrena el modelo
 PARAM$input$future <- c(202106) # meses donde se aplica el modelo
 
@@ -154,3 +154,5 @@ for (envios in cortes) {
 }
 
 cat("\n\nLa generacion de los archivos para Kaggle ha terminado\n")
+
+# Tras correrlo, me quedo con KA4210_12500.csv
