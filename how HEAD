@@ -1,0 +1,172 @@
+[33mcommit e67ef619156d8bf6fa6dfb69d87bfc283d97753f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: estudiante-exactas <carminzangari@yahoo.com.ar>
+Date:   Mon Nov 11 01:45:32 2024 -0300
+
+    Tercer commit x correr mal git diff
+
+[33mcommit 0f4bbb26d6f042b2b62ae56e0dfc07f0a71edf65[m
+Author: estudiante-exactas <carminzangari@yahoo.com.ar>
+Date:   Mon Nov 11 01:38:57 2024 -0300
+
+    Agrego línea a prueba.txt
+
+[33mcommit 71287fd96277098a0bac9e66833d14e2902c4a58[m
+Author: estudiante-exactas <carminzangari@yahoo.com.ar>
+Date:   Mon Nov 11 01:30:46 2024 -0300
+
+    On branch main
+    Your branch is up to date with 'origin/main'.
+    
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+            new file:   prueba.txt
+
+[33mcommit 73d84d6f3fb845e8856fdd4353359f6a7e10997f[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 602f828 0bc52a9
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Fri Aug 23 10:12:51 2024 -0300
+
+    sync main to develop
+
+[33mcommit 0bc52a9d48b7a04bc47811223209dc185e95686b[m
+Merge: 275de5c 6af8b61
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Fri Aug 23 10:12:49 2024 -0300
+
+    sync develop to feature/medicion
+
+[33mcommit 6af8b61bc6b1049c2c18b4ae044123a8c0d0d6c1[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Fri Aug 23 10:12:39 2024 -0300
+
+    z233_diezmil_montecarlo.r
+
+[33mcommit 602f8289b9c45e0f5b5a6542064de8cca7fd0de2[m
+Merge: 959c0f2 275de5c
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:37:30 2024 -0300
+
+    sync main to develop
+
+[33mcommit 275de5cc2b75ad6c12a719567dca704a4a501315[m
+Merge: ffcd758 0342808
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:37:17 2024 -0300
+
+    sync develop to feature/medicion
+
+[33mcommit 03428088d60be6fa0550e876725fc1d9908d39e8[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:37:00 2024 -0300
+
+    z244_dos_modelos.r
+
+[33mcommit 671b606818d6e5da93e7d23e5ae73db9bde9fd27[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:36:55 2024 -0300
+
+    z241_buenoymalo.r
+
+[33mcommit bb8a890e413b06148d2432bfe3b089b5a369f858[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:36:50 2024 -0300
+
+    z228_ene_montecarlo.jl
+
+[33mcommit 4a02a887f693ce37b2fa62f1e6b57a4011ff8b0b[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:36:46 2024 -0300
+
+    z227_ene_montecarlo.r
+
+[33mcommit c07289837f62dd40708af5f7a9745cd08c34a168[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:36:41 2024 -0300
+
+    z225_nuevas_semillas.r
+
+[33mcommit 9fa222ead7362bc2f70e9617d5e3256a14067918[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:36:35 2024 -0300
+
+    z222_traintest_montecarlo.r
+
+[33mcommit c812162c2d7ad65e83511cef5d66f450e96d88d1[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Thu Aug 22 16:36:18 2024 -0300
+
+    z211_traintest_estratificado.r
+
+[33mcommit 959c0f2583c24cc5478c40f9c8bce4de785bcc8c[m
+Merge: 1166f4a 7a3d392
+Author: Alejandro Bolaños <alejandro.daniel@gmail.com>
+Date:   Mon Aug 19 14:43:14 2024 -0300
+
+    Merge pull request #2 from alejandrob17/main
+    
+    Clase 2 - SQL, Arboles, EDA
+
+[33mcommit 7a3d392dcc5ad579c044a7fd8bdcd44ed766405f[m
+Author: Alejandro Bolaños <alejandro.bolanos@muttdata.ai>
+Date:   Mon Aug 19 14:42:29 2024 -0300
+
+    Clase 2 - SQL, Arboles, EDA
+
+[33mcommit 1166f4a87138da3e23bd0706e3762cbb9898a4e4[m
+Merge: c11cc30 568f02e
+Author: Alejandro Bolaños <alejandro.daniel@gmail.com>
+Date:   Tue Aug 13 20:27:39 2024 -0300
+
+    Merge pull request #1 from alejandrob17/main
+    
+    Primer clase
+
+[33mcommit 568f02ea93cfa6b35edd5c6d0097141de1e423a0[m
+Author: Alejandro <alejandro@MacBook-Air-de-Lorena.local>
+Date:   Tue Aug 13 20:26:27 2024 -0300
+
+    chore: move files
+
+[33mcommit bcb9d408c181b9d8dc21208d7d74767b977d55cc[m
+Author: Alejandro <alejandro@MacBook-Air-de-Lorena.local>
+Date:   Tue Aug 13 20:20:47 2024 -0300
+
+    SQL, clase target
+
+[33mcommit c11cc30d8108b905e7dd438773d4d7ebe30d1038[m
+Merge: b5263d4 ffcd758
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Mon Aug 12 09:50:50 2024 -0300
+
+    sync main to develop
+
+[33mcommit ffcd75879a7838b09e7ef1cf0005285d1034d7dc[m
+Merge: d52b9ad 8b9b4ab
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Mon Aug 12 09:50:43 2024 -0300
+
+    sync develop to feature/z102_PrimerModelo
+
+[33mcommit 8b9b4ab5fb5de11c35471450ab23e88d0d8008b4[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Mon Aug 12 09:50:21 2024 -0300
+
+    z101_PrimerModelo.R
+
+[33mcommit d52b9ad182a2b0c9a7b91955f15e56729345f486[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Wed Aug 7 03:17:34 2024 -0300
+
+    develop empty
+
+[33mcommit b5263d40e3add4abb1d0bda1ca0c4c55dc65a29e[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Wed Aug 7 03:17:16 2024 -0300
+
+    .gitignore
+
+[33mcommit 910db1e5070186582b2d694a1447d04b07699897[m
+Author: GustavoDenicolay <gustavo.denicolay@gmail.com>
+Date:   Wed Aug 7 03:17:15 2024 -0300
+
+    .gitattributes
