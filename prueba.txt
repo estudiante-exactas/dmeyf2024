@@ -1,5 +1,6 @@
 cat me va a mostrar lo que dice acá
 
 
+no entiendo porque me desaparecieron las dos líneas que escribi... quería generar un conflicto
 cambio que hago a ver si lo puedo ver con git
 tengo que escribir esta línea por no haber leído bien las instrucciones
