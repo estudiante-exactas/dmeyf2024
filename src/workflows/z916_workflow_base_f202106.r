@@ -25,7 +25,7 @@ args <- commandArgs(trailingOnly=TRUE)
 envg$EXPENV$scriptname <- args[1]
 
 #------------------------------------------------------------------------------
-# Error catching
+# Error catching: Configura una función personalizada para capturar errores y registrar un mensaje en un archivo (z-Rabort.txt).
 
 options(error = function() {
   traceback(20)
@@ -55,7 +55,7 @@ source( exp_lib )
 
 #------------------------------------------------------------------------------
 # Incorporacion Dataset
-# deterministico, SIN random
+# deterministico, SIN random: Define claves primarias (primarykey) y columnas importantes.Ejecuta el script /src/wf-etapas/z1101_DT_incorporar_dataset.r.
 
 DT_incorporar_dataset <- function( arch_dataset )
 {
@@ -92,7 +92,7 @@ CA_catastrophe_base <- function( pinputexps, metodo )
 }
 #------------------------------------------------------------------------------
 # Feature Engineering Intra Mes   Baseline
-# deterministico, SIN random
+# deterministico, SIN random: Usa métodos manuales para ingeniería de características intra-mes.
 
 FEintra_manual_base <- function( pinputexps )
 {
@@ -107,7 +107,7 @@ FEintra_manual_base <- function( pinputexps )
 }
 #------------------------------------------------------------------------------
 # Data Drifting Baseline
-# deterministico, SIN random
+# deterministico, SIN random: Maneja el "data drift" con métodos como: Ninguno, Rankeo simple (rank_simple), Deflación (deflacion)
 
 DR_drifting_base <- function( pinputexps, metodo)
 {
@@ -125,7 +125,7 @@ DR_drifting_base <- function( pinputexps, metodo)
 }
 #------------------------------------------------------------------------------
 # Feature Engineering Historico  Baseline
-# deterministico, SIN random
+# deterministico, SIN random: Permite trabajar con lags y tendencias (pueden desactivarse con opciones booleanas).
 
 FEhist_base <- function( pinputexps)
 {
