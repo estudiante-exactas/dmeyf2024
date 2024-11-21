@@ -18,16 +18,10 @@ gc(full = TRUE, verbose= FALSE) # garbage collection
 require("data.table", quietly=TRUE)
 require("yaml", quietly=TRUE)
 
+
 # cargo la libreria
 # args <- c( "~/labo2024ba" )
-#args <- commandArgs(trailingOnly=TRUE)
-
-args <- commandArgs(trailingOnly = TRUE)
-if (length(args) == 0) {
-  args[1] <- getwd()  # Directorio actual como predeterminado
-}
-print(args)
-
+args <- commandArgs(trailingOnly=TRUE)
 source( paste0( args[1] , "/src/lib/action_lib.r" ) )
 
 #------------------------------------------------------------------------------
@@ -39,9 +33,6 @@ action_inicializar()
 
 # cargo el dataset
 cat("lectura del dataset\n")
-getwd()
-envg$PARAM$archivo <- "./src/wf-etapas/competencia_02_R.csv"
-
 arch <- envg$PARAM$archivo
 action_verificar_archivo( arch )
 cat( "Iniciando lectura del archivo\n" )
