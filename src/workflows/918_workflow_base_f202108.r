@@ -420,7 +420,7 @@ KA_evaluate_kaggle <- function( pinputexps )
 # Este es el  Workflow Baseline
 # Que predice 202108 donde NO conozco la clase
 
-wf_resultado_semilla2_sincanarito_varioparam <- function( pnombrewf )
+wf_resultado_semilla2_sincanarito_varioparam2 <- function( pnombrewf )
 {
   param_local <- exp_wf_init( pnombrewf ) # linea workflow inicial fija
 
@@ -428,7 +428,7 @@ wf_resultado_semilla2_sincanarito_varioparam <- function( pnombrewf )
   DT_incorporar_dataset( "~/buckets/b1/datasets/competencia_02_R.csv.gz")
 
   # Etapas preprocesamiento
-  CA_catastrophe_base( metodo="EstadisticaClasica") # probar cambiarlo
+  CA_catastrophe_base( metodo="MICE") # probar cambiarlo
   FEintra_manual_base()
   DR_drifting_base(metodo="estandarizar") # probar cambiarlo
   FEhist_base()
@@ -459,5 +459,5 @@ wf_resultado_semilla2_sincanarito_varioparam <- function( pnombrewf )
 # Aqui comienza el programa
 
 # llamo al workflow con future = 202108
-wf_resultado_semilla2_sincanarito_varioparam()
+wf_resultado_semilla2_sincanarito_varioparam2()
 
