@@ -18,7 +18,7 @@ envg$EXPENV$repo_dir <- "~/dmeyf2024/"
 envg$EXPENV$datasets_dir <- "~/buckets/b1/datasets/"
 envg$EXPENV$messenger <- "~/install/zulip_enviar.sh"
 
-envg$EXPENV$semilla_primigenia <- 919393
+envg$EXPENV$semilla_primigenia <- 750317
 
 # leo el unico parametro del script
 args <- commandArgs(trailingOnly=TRUE)
@@ -329,9 +329,9 @@ HT_tuning_base <- function( pinputexps, bo_iteraciones, bypass=FALSE)
     max_bin = 31L, # lo debo dejar fijo, no participa de la BO
     num_iterations = 9999, # un numero muy grande, lo limita early_stopping_rounds
 
-    bagging_fraction = 0.2, # 0.0 < bagging_fraction <= 1.0
+    bagging_fraction = 0.1, # 0.0 < bagging_fraction <= 1.0
     pos_bagging_fraction = 1.0, # 0.0 < pos_bagging_fraction <= 1.0
-    neg_bagging_fraction = 0.2, # 0.0 < neg_bagging_fraction <= 1.0
+    neg_bagging_fraction = 0.1, # 0.0 < neg_bagging_fraction <= 1.0
     is_unbalance = FALSE, #
     scale_pos_weight = 1.0, # scale_pos_weight > 0.0
 
@@ -420,7 +420,7 @@ KA_evaluate_kaggle <- function( pinputexps )
 # Este es el  Workflow Baseline
 # Que predice 202108 donde NO conozco la clase
 
-wf_resultado_semilla2_sincanarito_ML_UVA_bagging <- function( pnombrewf )
+wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_bagging0.1 <- function( pnombrewf )
 {
   param_local <- exp_wf_init( pnombrewf ) # linea workflow inicial fija
 
@@ -428,9 +428,9 @@ wf_resultado_semilla2_sincanarito_ML_UVA_bagging <- function( pnombrewf )
   DT_incorporar_dataset( "~/buckets/b1/datasets/competencia_02_R.csv.gz")
 
   # Etapas preprocesamiento
-  CA_catastrophe_base( metodo="MachineLearning") # probar cambiarlo
+  CA_catastrophe_base( metodo="Ninguno") # probar cambiarlo
   FEintra_manual_base()
-  DR_drifting_base(metodo="UVA") # probar cambiarlo
+  DR_drifting_base(metodo="rank_cero_fijo") # probar cambiarlo
   FEhist_base()
 
 # "Apagado" en primera instancia de prueba
@@ -459,5 +459,5 @@ wf_resultado_semilla2_sincanarito_ML_UVA_bagging <- function( pnombrewf )
 # Aqui comienza el programa
 
 # llamo al workflow con future = 202108
-wf_resultado_semilla2_sincanarito_ML_UVA_bagging()
+wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_bagging0.1()
 
