@@ -1,0 +1,6 @@
+
+Para obtener el resultado que hubiera elegido como la mejor opción en la competencia Kaggle (que no es la finalmente elegida en el leaderboard automáticamente por Kaggle sino la late submission realizada el 25/11/2024 9 AM) utilicé el WUBA provisto por la cátedra realizándole adaptaciones. Para replicar esta predicción utilicé los siguientes scripts de la carpeta workflows:
+
+1. Generé la clase ternaria localmente en mi computadora mediante la misma (se copia el código asociado en "clase_ternaria.R")
+2. Corrí el script "correr_workflow_entrega_final.R" que hace referencia al script "baseline_workflow_entrega_final.R" que presenta variaciones en cuanto al parámetro bagging, utiliza el método "ninguno" en Catastrophee analysis y "rank_cero_fijo" como corrección del data drifting. Este script utiliza el workflow de la carpeta wf-etapas.
+3. Elijo como predicción parar subir a Kaggle la correspondiente a la semilla 536479 con punto de corte 12500 por tener una ganancia cercana al promedio para las distintas semillas con ese corte que queda en el bucket de Google Cloud correspondiente.  
