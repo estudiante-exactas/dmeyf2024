@@ -70,6 +70,3 @@ anteultimo_periodo <- ultimo_periodo %m-% months(1)
  write.csv(dataset, "./datasets/prueba_competencia_02_R.csv") # creo archivo
 
 ###################################################################################
-
-dataset <- fread("./datasets/competencia_02_R.csv")
-
