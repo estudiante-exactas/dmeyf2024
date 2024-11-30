@@ -348,7 +348,7 @@ HT_tuning_base <- function( pinputexps, bo_iteraciones, bypass=FALSE)
     bagging_fraction = c(0, 1), # 0.0 < bagging_fraction <= 1.0
     pos_bagging_fraction = c(0, 1), # 0.0 < pos_bagging_fraction <= 1.0
     neg_bagging_fraction = c(0, 1), # 0.0 < neg_bagging_fraction <= 1.0
-    bagging_freq = c(1L, 50L, "integer" )
+    bagging_freq = c(1L, 500L, "integer" )
   )
 
 
@@ -424,7 +424,7 @@ KA_evaluate_kaggle <- function( pinputexps )
 # Este es el  Workflow Baseline
 # Que predice 202108 donde NO conozco la clase
 
-wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_optimizacion_bagging_masmeses <- function( pnombrewf )
+wf_resultado_semilla750317_sincanarito_ningunCA_deflacion_optimizacion_baggingfreqhasta500_masmeses <- function( pnombrewf )
 {
   param_local <- exp_wf_init( pnombrewf ) # linea workflow inicial fija
 
@@ -434,8 +434,8 @@ wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_optimizacion_bagg
   # Etapas preprocesamiento
   CA_catastrophe_base( metodo="Ninguno") # probar cambiarlo
   FEintra_manual_base()
-  DR_drifting_base(metodo="rank_cero_fijo") # probar cambiarlo
-#  FEhist_base()
+  DR_drifting_base(metodo="deflacion") # probar cambiarlo
+  FEhist_base()
 
 # "Apagado" en primera instancia de prueba
   
@@ -463,5 +463,5 @@ wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_optimizacion_bagg
 # Aqui comienza el programa
 
 # llamo al workflow con future = 202108
-wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_optimizacion_bagging_masmeses()
+wf_resultado_semilla750317_sincanarito_ningunCA_deflacion_optimizacion_baggingfreqhasta500_masmeses()
 
