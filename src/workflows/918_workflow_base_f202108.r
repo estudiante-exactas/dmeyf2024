@@ -267,7 +267,7 @@ TS_strategy_base8 <- function( pinputexps )
   param_local$meta$script <- "/src/wf-etapas/z2101_TS_training_strategy.r"
 
 
-  param_local$future <- c(202108)
+  param_local$future <- c(202109)
 
   param_local$final_train$undersampling <- 1.0
   param_local$final_train$clase_minoritaria <- c( "BAJA+1", "BAJA+2")
@@ -348,7 +348,7 @@ HT_tuning_base <- function( pinputexps, bo_iteraciones, bypass=FALSE)
     bagging_fraction = c(0, 1), # 0.0 < bagging_fraction <= 1.0
     pos_bagging_fraction = c(0, 1), # 0.0 < pos_bagging_fraction <= 1.0
     neg_bagging_fraction = c(0, 1), # 0.0 < neg_bagging_fraction <= 1.0
-    bagging_freq = c(1L, 50L)
+    bagging_freq = c(1L, 50L, "integer" )
   )
 
 
