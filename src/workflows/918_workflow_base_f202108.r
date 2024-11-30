@@ -329,9 +329,9 @@ HT_tuning_base <- function( pinputexps, bo_iteraciones, bypass=FALSE)
     max_bin = 31L, # lo debo dejar fijo, no participa de la BO
     num_iterations = 9999, # un numero muy grande, lo limita early_stopping_rounds
 
-    bagging_fraction = 0.1, # 0.0 < bagging_fraction <= 1.0
-    pos_bagging_fraction = 1.0, # 0.0 < pos_bagging_fraction <= 1.0
-    neg_bagging_fraction = 0.1, # 0.0 < neg_bagging_fraction <= 1.0
+    #bagging_fraction = 0.1, # 0.0 < bagging_fraction <= 1.0
+    #pos_bagging_fraction = 1.0, # 0.0 < pos_bagging_fraction <= 1.0
+    #neg_bagging_fraction = 0.1, # 0.0 < neg_bagging_fraction <= 1.0
     is_unbalance = FALSE, #
     scale_pos_weight = 1.0, # scale_pos_weight > 0.0
 
@@ -344,7 +344,11 @@ HT_tuning_base <- function( pinputexps, bo_iteraciones, bypass=FALSE)
     learning_rate = c( 0.02, 0.3 ),
     feature_fraction = c( 0.5, 0.9 ),
     num_leaves = c( 8L, 2048L,  "integer" ),
-    min_data_in_leaf = c( 100L, 10000L, "integer" )
+    min_data_in_leaf = c( 100L, 10000L, "integer" ),
+    bagging_fraction = c(0, 1), # 0.0 < bagging_fraction <= 1.0
+    pos_bagging_fraction = c(0, 1), # 0.0 < pos_bagging_fraction <= 1.0
+    neg_bagging_fraction = c(0, 1), # 0.0 < neg_bagging_fraction <= 1.0
+    bagging_freq = c(1, 50)
   )
 
 
@@ -420,12 +424,12 @@ KA_evaluate_kaggle <- function( pinputexps )
 # Este es el  Workflow Baseline
 # Que predice 202108 donde NO conozco la clase
 
-wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_bagging0.1 <- function( pnombrewf )
+wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_optimizacion_bagging <- function( pnombrewf )
 {
   param_local <- exp_wf_init( pnombrewf ) # linea workflow inicial fija
 
   # Etapa especificacion dataset de la Segunda Competencia Kaggle
-  DT_incorporar_dataset( "~/buckets/b1/datasets/competencia_02_R.csv.gz")
+  DT_incorporar_dataset( "~/buckets/b1/datasets/competencia_03_R.csv.gz")
 
   # Etapas preprocesamiento
   CA_catastrophe_base( metodo="Ninguno") # probar cambiarlo
@@ -459,5 +463,5 @@ wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_bagging0.1 <- fun
 # Aqui comienza el programa
 
 # llamo al workflow con future = 202108
-wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_bagging0.1()
+wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_optimizacion_bagging()
 
