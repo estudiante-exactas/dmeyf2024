@@ -432,7 +432,7 @@ wf_resultado_semilla750317_sincanarito_ningunCA_deflacion_optimizacion_baggingfr
   DT_incorporar_dataset( "~/buckets/b1/datasets/competencia_03_R.csv.gz")
 
   # Etapas preprocesamiento
-  CA_catastrophe_base( metodo="Ninguno") # probar cambiarlo
+  CA_catastrophe_base( metodo="MachineLearning") # probar cambiarlo
   FEintra_manual_base()
   DR_drifting_base(metodo="deflacion") # probar cambiarlo
   FEhist_base()
