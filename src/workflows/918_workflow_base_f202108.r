@@ -348,7 +348,7 @@ HT_tuning_base <- function( pinputexps, bo_iteraciones, bypass=FALSE)
     bagging_fraction = c(0, 1), # 0.0 < bagging_fraction <= 1.0
     pos_bagging_fraction = c(0, 1), # 0.0 < pos_bagging_fraction <= 1.0
     neg_bagging_fraction = c(0, 1), # 0.0 < neg_bagging_fraction <= 1.0
-    bagging_freq = c(1, 50)
+    bagging_freq = c(1L, 50L)
   )
 
 
@@ -435,7 +435,7 @@ wf_resultado_semilla750317_sincanarito_ningunCA_rank_cero_fijo_optimizacion_bagg
   CA_catastrophe_base( metodo="Ninguno") # probar cambiarlo
   FEintra_manual_base()
   DR_drifting_base(metodo="rank_cero_fijo") # probar cambiarlo
-  FEhist_base()
+#  FEhist_base()
 
 # "Apagado" en primera instancia de prueba
   
