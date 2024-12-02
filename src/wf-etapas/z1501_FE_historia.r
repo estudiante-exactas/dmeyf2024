@@ -237,9 +237,9 @@ for (vcol in cols_lagueables)
   # Convierte a numérico si es necesario AGREGADO MIO
   dataset[, (vcol) := as.numeric(get(vcol))] # AGREGADO MIO
   dataset[, paste0(vcol, "_lag1") := as.numeric(get(paste0(vcol, "_lag1")))] # AGREGADO MIO
-  print(typeof(dataset$vcol))          # Verifica el tipo de la columna AGREGADO MIO
+#  print(typeof(dataset$vcol))          # Verifica el tipo de la columna AGREGADO MIO
   dataset[, paste0(vcol, "_delta1") := get(vcol) - get(paste0(vcol, "_lag1"))]
-  print(typeof(dataset$vcol_lag1))    # Verifica el tipo de la columna "_lag1" AGREGADO MIO
+#  print(typeof(dataset$vcol_lag1))    # Verifica el tipo de la columna "_lag1" AGREGADO MIO
 }
 
 
