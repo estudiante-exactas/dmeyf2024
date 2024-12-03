@@ -149,9 +149,9 @@ FEhist_base <- function( pinputexps)
   param_local$Tendencias1$ratiomax <- FALSE
 
   # no me engraso las manos con las tendencias de segundo orden
-  param_local$Tendencias2$run <- FALSE
+  param_local$Tendencias2$run <- TRUE # FALSE
   param_local$Tendencias2$ventana <- 12
-  param_local$Tendencias2$tendencia <- FALSE
+  param_local$Tendencias2$tendencia <- TRUE # FALSE
   param_local$Tendencias2$minimo <- FALSE
   param_local$Tendencias2$maximo <- FALSE
   param_local$Tendencias2$promedio <- FALSE
@@ -271,12 +271,11 @@ TS_strategy_base8 <- function( pinputexps )
 
   param_local$final_train$undersampling <- 1.0
   param_local$final_train$clase_minoritaria <- c( "BAJA+1", "BAJA+2")
-  param_local$final_train$training <- c(202105, 202106, 202105, 202104,
-    202103, 202102, 202101, 202012, 202011, 202010, 202009, 202008, 202007,  202002,202001, 201912, 201911, 201910, 201909, 201908, 201907, 201906, 201905, 201904, 201903, 201902,201901) # agrego 202012, 202011, 202010, 202009, 202008, 202007, 202006, 202005, 202004, 202003, 202002,202001, 201912, 201911, 201910, 201909, 201908, 201907, 201906, 201905, 201904, 201903, 201902,201901 y agrego 202105 al principio
+  param_local$final_train$training <- c(202105, 202106, 202105, 202102, 202101, 202012, 202011, 202010, 202009, 202008, 202007,  202002,202001, 201912, 201911, 201909, 201908, 201907, 201906, 201904, 201903, 201902,201901) # agrego 202012, 202011, 202010, 202009, 202008, 202007, 202006, 202005, 202004, 202003, 202002,202001, 201912, 201911, 201910, 201909, 201908, 201907, 201906, 201905, 201904, 201903, 201902,201901 y agrego 202105 al principio
 
 
-  param_local$train$training <- c(202105, 202104, 202103, 202102,
-    202101, 202012, 202011, 202012, 202011, 202010, 202009, 202008, 202007, 202002,202001, 201912, 201911, 201910, 201909, 201908, 201907, 201906, 201905, 201904, 201903, 201902) #agrego 202012, 202011, 202010, 202009, 202008, 202007, 202006, 202005, 202004, 202003, 202002,202001, 201912, 201911, 201910, 201909, 201908, 201907, 201906, 201905, 201904, 201903, 201902 y agrego 202105 al principio
+  param_local$train$training <- c(202105, 202102,
+    202101, 202012, 202011, 202012, 202011, 202010, 202009, 202008, 202007, 202002,202001, 201912, 201911, 201909, 201908, 201907, 201906, 201904, 201903, 201902) #agrego 202012, 202011, 202010, 202009, 202008, 202007, 202006, 202005, 202004, 202003, 202002,202001, 201912, 201911, 201910, 201909, 201908, 201907, 201906, 201905, 201904, 201903, 201902 y agrego 202105 al principio
   param_local$train$validation <- c(202106) #antes era 202105
   param_local$train$testing <- c(202107) #antes era 202106
 
@@ -424,7 +423,7 @@ KA_evaluate_kaggle <- function( pinputexps )
 # Este es el  Workflow Baseline
 # Que predice 202108 donde NO conozco la clase
 
-wf_resultado_semilla750317_sincanarito_EstadClas_rank0fijo_optimizacion_baggingfreqhasta100yposfijo_masmeses_sinpand <- function( pnombrewf )
+wf_resultado_semilla750317_sincanarito_ML_UVA_optimizacion_posfijo_menosmeses <- function( pnombrewf )
 {
   param_local <- exp_wf_init( pnombrewf ) # linea workflow inicial fija
 
@@ -432,9 +431,9 @@ wf_resultado_semilla750317_sincanarito_EstadClas_rank0fijo_optimizacion_baggingf
   DT_incorporar_dataset( "~/buckets/b1/datasets/competencia_03_R.csv.gz")
 
   # Etapas preprocesamiento
-  CA_catastrophe_base( metodo="EstadisticaClasica") # probar cambiarlo
+  CA_catastrophe_base( metodo="MachineLearning") # probar cambiarlo
   FEintra_manual_base()
-  DR_drifting_base(metodo="rank_cero_fijo") # probar cambiarlo
+  DR_drifting_base(metodo="UVA") # probar cambiarlo
   FEhist_base()
 
 # "Apagado" en primera instancia de prueba
@@ -463,5 +462,5 @@ wf_resultado_semilla750317_sincanarito_EstadClas_rank0fijo_optimizacion_baggingf
 # Aqui comienza el programa
 
 # llamo al workflow con future = 202108
-wf_resultado_semilla750317_sincanarito_EstadClas_rank0fijo_optimizacion_baggingfreqhasta100yposfijo_masmeses_sinpand()
+wf_resultado_semilla750317_sincanarito_ML_UVA_optimizacion_posfijo_menosmeses()
 
