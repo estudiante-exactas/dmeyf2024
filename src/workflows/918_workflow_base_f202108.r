@@ -139,7 +139,7 @@ FEhist_base <- function( pinputexps)
   param_local$lag3 <- TRUE # no me engraso con los lags de orden 3
   
   # no me engraso las manos con las tendencias
-  param_local$Tendencias1$run <- TRUE  # FALSE, no corre nada de lo que sigue
+  param_local$Tendencias1$run <- FALSE  # FALSE, no corre nada de lo que sigue
   param_local$Tendencias1$ventana <- 6
   param_local$Tendencias1$tendencia <- FALSE
   param_local$Tendencias1$minimo <- FALSE
@@ -149,7 +149,7 @@ FEhist_base <- function( pinputexps)
   param_local$Tendencias1$ratiomax <- FALSE
   
   # no me engraso las manos con las tendencias de segundo orden
-  param_local$Tendencias2$run <- TRUE # LOCAMBIO MARTES10AM
+  param_local$Tendencias2$run <- FALSE # LOCAMBIO MARTES10AM
   param_local$Tendencias2$ventana <- 12
   param_local$Tendencias2$tendencia <- FALSE
   param_local$Tendencias2$minimo <- FALSE
@@ -451,7 +451,7 @@ wf_resultado_semilla750317_sincanarito_ML_UVA_optimizacion_posfijo_menosmesesTEN
   ht <- HT_tuning_base( bo_iteraciones = 30 )  # iteraciones inteligentes LA BAYESIANA, LA QUE TARDA
   
   # Etapas finales
-  fm <- FM_final_models_lightgbm( c(ht, ts8), ranks=c(1), qsemillas=15 )
+  fm <- FM_final_models_lightgbm( c(ht, ts8), ranks=c(1), qsemillas=10 )
   SC_scoring( c(fm, ts8) )
   KA_evaluate_kaggle()  # genera archivos para Kaggle
   
