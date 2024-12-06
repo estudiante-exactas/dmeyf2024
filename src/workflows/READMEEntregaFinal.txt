@@ -1,0 +1,6 @@
+
+Para obtener el resultado elegido como la mejor opción en la competencia Kaggle utilicé el WUBA provisto por la cátedra realizándole adaptaciones. Para replicar esta predicción utilicé los siguientes scripts de la carpeta workflows:
+
+1. Generé la clase ternaria localmente en mi computadora con la base de datos proporcionada (se copia el código asociado en "clase_ternaria.R")
+2. Corrí el script "correr_entrega_final.R" que hace referencia al script "base_entrega_final.R" que presenta variaciones en cuanto a los parámetros "bagging" tras realizar la correspondiente optimización bayesiana fijando pos_bagging_fraction = 1, utiliza el método "MachineLearning" en Catastrophee analysis y "UVA" como corrección del data drifting y eliminé ciertos meses del conjunto de entrenamiento principalmente. Este script utiliza el workflow de la carpeta wf-etapas.
+3. Elijo como predicción parar subir a Kaggle la correspondiente a la semilla 815141 con punto de corte 10000 generada en el bucket de Google Cloud correspondiente.  
